@@ -47,7 +47,7 @@ SourceArt/**/*.tga
 
 # Binary Files
 Binaries/*
-Plugins/**/Binaries/*
+Plugins/*/Binaries/*
 
 # Builds
 Build/*
@@ -68,7 +68,18 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
-Plugins/**/Intermediate/*
+Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+*.rar
+Content/Imports/first_test_map_V2Heightmap.uasset
+Content/Maps/FinalTestMap.umap
+Content/Maps/FinalTestMap.umap
+Content/Maps/TestMapV2.umap
+Content/Core/PCG/TestMapV2.uasset
+Content/Maps/TestMaps/TestMapV2.umap
+Content/__ExternalActors__/*
+Content/__ExternalObjects__/*
+Content/Maps/TestMapV3.umap
+Content/Meshes/FoliagePackV1/Maps/*
