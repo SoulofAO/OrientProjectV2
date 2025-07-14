@@ -1,0 +1,221 @@
+{
+    "file_path": "C:/Users/sgsgg/Downloads/TestMapGeneratorV25.omap",
+    "global_scale_multiplier": 0.5,
+    "first_level_distance": 50,
+    "max_distance_to_border_polygon": 46,
+    "draw_with_max_border_polygon": true,
+    "remove_all_error_lines": true,
+    "min_owner_overlap": 0.95,
+    "draw_with_slope_line_color": true,
+    "max_distance_to_slope_line": 20,
+    "use_octree_to_fix_line": false,
+    "use_octree_to_recive_slope_line": true,
+    "blend_slope_line": true,
+    "seed": 1,
+    "guess_slope_direction_by_rivers": true,
+    "guess_slope_direction_by_rivers_range": 50,
+    "guess_slope_direction_by_intersect_rivers_trace_range": 25,
+    "guess_slope_direction_by_rivers_debug_draw": true,
+    "guess_slope_direction_by_contour_line_angle": true,
+    "guess_object_type_by_direct_indexes": true,
+    "optimize_line_point_count": false,
+    "optimize_line_point_percent": 40,
+    "slope_line_debug_draw": true,
+    "draw_plot_height_map_on_GPU": true,
+    "draw_plot_height_map_on_GPU_number_iterations": 2000,
+    "draw_with_heightmap_step": true,
+    "heightmap_step": 500,
+    "max_heightmap_step": 65535,
+    "fixing_lines_settings": [
+        {
+            "max_merge_line_value": 5,
+            "border_distance": 5,
+            "hight_find_direction": "both",
+            "apply_fix_unborder_lines": true,
+            "apply_merge_line_value": false,
+            "regenerate_borders": true,
+            "max_angle": 90,
+            "fix_unborder_if_both_point_unborder": true,
+            "use_normalize_blend_if_possible": true,
+            "enable_merge_with_self": true
+        },
+        {
+            "max_merge_line_value": 5,
+            "border_distance": 5,
+            "hight_find_direction": "both",
+            "apply_fix_unborder_lines": true,
+            "apply_merge_line_value": false,
+            "regenerate_borders": true,
+            "max_angle": 90,
+            "fix_unborder_if_both_point_unborder": true,
+            "use_normalize_blend_if_possible": true,
+            "enable_merge_with_self": true
+        },
+        {
+            "max_merge_line_value": 50,
+            "border_distance": 0,
+            "hight_find_direction": "both",
+            "apply_fix_unborder_lines": false,
+            "apply_merge_line_value": true,
+            "regenerate_borders": true,
+            "max_angle": 40,
+            "fix_unborder_if_both_point_unborder": true,
+            "use_normalize_blend_if_possible": true,
+            "enable_merge_with_self": true
+        },
+        {
+            "max_merge_line_value": 50,
+            "border_distance": 10,
+            "hight_find_direction": "both",
+            "apply_fix_unborder_lines": true,
+            "apply_merge_line_value": true,
+            "regenerate_borders": true,
+            "max_angle": 40,
+            "fix_unborder_if_both_point_unborder": false,
+            "use_normalize_blend_if_possible": true,
+            "enable_merge_with_self": true
+        }
+    ],
+    "availible_parce_line_settings": [
+        {
+            "name": "Contour",
+            "index": 1,
+            "type": "Contour"
+        },
+        {
+            "name": "Index contour",
+            "index": 1,
+            "type": "Contour"
+        },
+        {
+            "name": "Slope line, contour",
+            "index": 1,
+            "type": "Slope line"
+        },
+        {
+            "name": "Index contour",
+            "index": 1,
+            "type": "Slope line"
+        },
+        {
+            "name": "Slope line, index contour",
+            "index": 1,
+            "type": "Slope line"
+        },
+        {
+            "name": "Slope line",
+            "index": 1,
+            "type": "Slope line"
+        },
+        {
+            "name": "Uncrossable body of water (full colour), with bank line",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Uncrossable body of water (dominant), with bank line",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Uncrossable body of water (dominant)",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Shallow body of water, with solid outline",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Shallow body of water",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Shallow body of water, solid outline",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Shallow body of water, dashed outline",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Small shallow body of water (full colour)",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Crossable watercourse",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Small crossable watercourse",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Minor/seasonal water channel",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Uncrossable marsh, with outline",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Uncrossable marsh",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Marsh",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Narrow marsh",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Waterhole",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Marsh, minimum size",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Indistinct marsh",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Indistinct marsh, minimum size",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Well, fountain or water tank",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Spring",
+            "index": 1,
+            "type": "Water"
+        },
+        {
+            "name": "Prominent water feature",
+            "index": 1,
+            "type": "Water"
+        }
+    ]
+}
