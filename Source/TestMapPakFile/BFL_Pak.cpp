@@ -82,36 +82,32 @@ TArray<FString> UBFL_Pak::GetPakContent(const FString& PakFilePath, bool bOnlyCo
 	Pak = PakFile.GetReference();
 	TArray<FString> PakContent;
 
-	if (Pak->IsValid())
+	if (Pak && Pak->IsValid())
 	{
 		FString ContentPath, PakAppendPath;
 		FString MountPoint = GetPakMountPoint(PakFilePath);
-		MountPoint.Split("/Content/", &ContentPath, &PakAppendPath);
+		MountPoint.Split(TEXT("/Content/"), &ContentPath, &PakAppendPath);
 
-
-		TArray<FPakFile::FFilenameIterator> Records;
 		for (FPakFile::FFilenameIterator It(*Pak, false); It; ++It)
 		{
-			Records.Add(It);
-		}
-
-		for (auto& It : Records)
-		{
+			const FString& FileName = It.Filename();
 			if (bOnlyCooked)
 			{
-				if (FPaths::GetExtension(It.Filename()) == TEXT("uasset"))
+				if (FPaths::GetExtension(FileName) == TEXT("uasset"))
 				{
-					PakContent.Add(FString::Printf(TEXT("%s%s"), *PakAppendPath, *It.Filename()));
+					PakContent.Add(FString::Printf(TEXT("%s%s"), *PakAppendPath, *FileName));
 				}
 			}
 			else
 			{
-				PakContent.Add(FString::Printf(TEXT("%s%s"), *PakAppendPath, *It.Filename()));
+				PakContent.Add(FString::Printf(TEXT("%s%s"), *PakAppendPath, *FileName));
 			}
 		}
 	}
+
 	return PakContent;
 }
+
 
 FString UBFL_Pak::GetPakMountContentPath(const FString& PakFilePath)
 {

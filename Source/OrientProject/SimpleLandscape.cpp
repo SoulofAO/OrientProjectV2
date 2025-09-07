@@ -40,6 +40,7 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Engine/Canvas.h"
 #include "WorldPartition/WorldPartition.h"
+#include "UObject/SavePackage.h"
 
 ASimpleLandscapePart::ASimpleLandscapePart()
 {
@@ -1734,7 +1735,9 @@ void ASimpleLandscape::RebuildBrush_Iternal(const FBlueprintBrushStruct& Bluepri
                 Package->MarkPackageDirty();
 
                 FString PackageFileName = FPackageName::LongPackageNameToFilename(Package->GetName(), FPackageName::GetAssetPackageExtension());
-                UPackage::SavePackage(Package, NewTexture, EObjectFlags::RF_Public | EObjectFlags::RF_Standalone, *PackageFileName);
+                FSavePackageArgs SaveArgs;
+				SaveArgs.TopLevelFlags = RF_Public | RF_Standalone;
+                UPackage::SavePackage(Package, NewTexture, *PackageFileName, SaveArgs);
 
 
                 if (!LandscapePart->CacheLayerTextures.Contains(BlueprintBrushStruct))
